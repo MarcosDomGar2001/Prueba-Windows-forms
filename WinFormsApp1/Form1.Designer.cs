@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
             Contrasena_Campo = new TextBox();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -77,6 +80,10 @@
             Contrasena_Campo.TabIndex = 3;
             Contrasena_Campo.TextChanged += Contrasena;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -89,6 +96,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -99,5 +107,6 @@
         private Label label1;
         private TextBox textBox1;
         private TextBox Contrasena_Campo;
+        private ErrorProvider errorProvider1;
     }
 }
